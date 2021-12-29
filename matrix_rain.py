@@ -22,7 +22,7 @@ class matrix_rain:
         width = width or get_terminal_size()[0]
         height = height or get_terminal_size()[1]
 
-        register(print(), end=f"\x1b[1000A\r\x1b[{height+1}B")
+        register(print, end=f"\x1b[1000A\r\x1b[{height+1}B")
 
         Thread(
             target=self.matrix_rain,
